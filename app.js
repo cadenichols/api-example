@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('HELLO!!');
+
 var request = require('request');
 var Base64 = require('js-base64').Base64;
 
@@ -11,7 +13,6 @@ var SECRET = process.env.PB_SECRET;
 var oauthUrl = 'https://api.pitneybowes.com/oauth/token';
 
 var key = Base64.encode(`${API_KEY}:${SECRET}`);
-
 
 request.post({
   url: oauthUrl,
